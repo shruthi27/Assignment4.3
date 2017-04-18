@@ -1,0 +1,36 @@
+package oops_part2_session4_assignment3;
+
+class C{
+	
+	public void test(){
+		System.out.println("This is the test method of class C");
+	}
+}
+
+class B extends C{
+	
+	public void test(){
+		
+		System.out.println("This is the test method of class B");
+	}
+}
+public class A extends B{
+
+	public static void main(String[] args) {
+                                    /*
+		 TODO Auto-generated method stub
+	                  Now main is a method inside class A and if we try to access the 
+		 test method of class by keeping in mind the concept of overriding
+		then we have only one one option which is super
+		
+		if we try to call test method through super then only we can access it's parent class
+		 methods not above that so the answer should be not possible.
+		*/
+	}
+	public  void test(){
+		super.test();      // this will call the test method of class B.
+
+		System.out.println("This is the test method of class A");
+	}
+
+}
